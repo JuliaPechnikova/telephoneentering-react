@@ -1,0 +1,38 @@
+.addphoneform__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(221, 235, 221);
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 50px 0;
+  border-radius: 10px;
+}
+
+.addphoneform__selector {
+  border: none;
+  background: rgb(222, 250, 212);
+  padding: 8px 16px;
+  outline: none;
+  font-size: 18px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.addphoneform__input {
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  margin-right: 10px;
+  font-size: 18px;
+  background: rgb(222, 250, 212);
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.addphoneform__submit-button {
+  font-size: 18px;
+  border: none;
+  background: none;
+  font-weight: bold;
+}
