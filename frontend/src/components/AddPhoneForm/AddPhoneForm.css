@@ -1,7 +1,4 @@
 .addphoneform__form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: rgb(221, 235, 221);
   max-width: 600px;
   margin: 50px auto;
@@ -28,6 +25,12 @@
   background: rgb(222, 250, 212);
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
+}
+
+.addphoneform__forminput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .addphoneform__submit-button {
