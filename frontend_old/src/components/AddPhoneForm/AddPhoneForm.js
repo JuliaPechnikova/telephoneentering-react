@@ -1,6 +1,8 @@
 import './AddPhoneForm.css';
 import React from 'react';
 import { useFormWithValidation } from '../../utils/Validation.js';
+import { connect } from 'react-redux';
+import { createTelephone } from '../../redux/actions';
 
 const phoneCodes =  [
   {
@@ -23,9 +25,10 @@ function AddPhoneForm(props) {
   function handleSubmit(e) {
     e.preventDefault();
 
-    props.onUpdateAddTelephone({
-      value: values.telephone,
-    });
+    props.createTelephone(values.telephone)
+    // props.onUpdateCreateTelephone({
+    //   value: values.telephone,
+    // });
   }
 
   React.useEffect(() => {
@@ -42,8 +45,7 @@ function AddPhoneForm(props) {
         }
       </select>
       <div className="addphoneform__container">
-        <label htmlFor="search" className="search-form__search"></label>
-        <input type="search" name="telephone" id="search" required minLength="3" maxLength="10" className="addphoneform__input" onChange={handleChange}/>
+        <input type="text" name="telephone" id="telephone" value={values.telephone} required minLength="3" maxLength="10" className="addphoneform__input" onChange={handleChange}/>
       </div>
       <div className="addphoneform__container">
         <button type="submit" className="addphoneform__submit-button">Сохранить</button>
@@ -55,4 +57,8 @@ function AddPhoneForm(props) {
   ); 
 }
 
-export default AddPhoneForm;
+const mapDispatchToProps = {
+  createTelephone
+}
+
+export default connect(null, mapDispatchToProps)(AddPhoneForm);

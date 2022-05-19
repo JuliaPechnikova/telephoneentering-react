@@ -1,0 +1,15 @@
+.app {
+  padding-top: 100px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0; 
+  min-height: 100vh;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.app__tablename {
+  text-align: center;
+  margin: 0;
+  padding: 30px 0 20px 0;
+}
